@@ -3,16 +3,14 @@
 
 
 function generatePassword(){
-  var passwordLength = prompt("Choose a password length (must be between 8 and 128)")
-    if (passwordLength > 128) {
-      console.log()
-    } else if (passwordLength < 8){
-      console.log("Please enter a number between 8 and 128")
+  var passwordLength = parseInt(prompt("Choose a password length (must be between 8 and 128)"))
+    if (passwordLength > 128 || passwordLength < 8 || isNaN(passwordLength)) {
+      alert("Please enter a number between 8 and 128")
     } else  {
       console.log(passwordLength)
        }
   
-  var incLowercase = confirm("Would you like to include lowercase characters?")
+/*   var incLowercase = confirm("Would you like to include lowercase characters?")
     console.log(incLowercase);
 
   var incUppercase = confirm("Would you like to include lowercase characters?")
@@ -22,18 +20,7 @@ function generatePassword(){
   console.log(incNum);
 
   var incSpecialChar = confirm("Would you like to include lowercase characters?")
-  console.log(incSpecialChar);
-
-
-
- /*  confirm("Would you like to include uppercase characters?")
-  confirm("Would you like to include numbers?")
-  confirm("Would you like to include special characters?") */
-
-  //Pseudocode
-//1. create prompts (steps 2 and 3) x
-//2. create a password length between 8 - 128 
-//3. confirm whether or not to include lowercase, uppercase, numbers, special chracters
+  console.log(incSpecialChar); */
 
 
 //4. Validate the input and at least one character type should be selected
