@@ -1,5 +1,8 @@
 // Assignment code here
-
+function generatePassword(){
+  console.log("Button clicked")
+  return "hola";
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
