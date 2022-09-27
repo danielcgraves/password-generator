@@ -2,18 +2,34 @@
 
 
 
-function generatePassword(){
-  var passwordLength = parseInt(prompt("Choose a password length (must be between 8 and 128)"))
-    if (passwordLength > 128 || passwordLength < 8 || isNaN(passwordLength)) {
-      alert("Please enter a number between 8 and 128")
-    } else  {
-      console.log(passwordLength)
-       }
-  
-/*   var incLowercase = confirm("Would you like to include lowercase characters?")
-    console.log(incLowercase);
 
-  var incUppercase = confirm("Would you like to include lowercase characters?")
+function generatePassword() {
+  var passwordLength = parseInt(prompt("Choose a password length (must be between 8 and 128)"));
+    if (passwordLength > 128 || passwordLength < 8 || isNaN(passwordLength)) {
+      alert("Please enter a number between 8 and 128");
+      return false;
+    }
+  var incLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ];
+    if (confirm("Would you like to include lowercase characters?")){
+      console.log(incLowerCase);
+    }
+  var incUpperCase = incLowerCase.map(element => {
+    return element.toUpperCase();
+  });
+    if (confirm("Would you like to include uppercase characters?")){
+    console.log(incUpperCase);
+    }
+  var incNum = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    if (confirm("Would you like to include numbers?")){
+      console.log(incNum);
+    }
+  var incSpecialChar = ["!", `"`, "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"]
+    if (confirm("Would you like to include special characters?")){
+      console.log(incSpecialChar);
+    }
+
+
+/*   var incUpperCase = confirm("Would you like to include lowercase characters?")
     console.log(incUppercase);
   
   var incNum = confirm("Would you like to include lowercase characters?")
