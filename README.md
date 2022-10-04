@@ -4,6 +4,6 @@
 
 The project can be found at https://danielcgraves.github.io/password-generator/
 
-![plot] (./password-generator-screenshot.png/)
+![plot] (./assets/password-generator-screenshot.png)
 
 ## MIT License
